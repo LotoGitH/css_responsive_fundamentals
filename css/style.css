@@ -1,0 +1,8 @@
+.elementoPadre {
+  display: flex;
+}
+
+.contenedor {
+  width: 20%;
+  height: 150px;
+}
