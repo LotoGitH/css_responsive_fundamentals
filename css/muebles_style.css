@@ -1,0 +1,13 @@
+.main-slider{
+  background-color: rgb(246,243,238);
+}
+
+.img-center{
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.text-slider{
+  color: #434343;
+}
