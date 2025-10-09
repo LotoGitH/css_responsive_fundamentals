@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba JavaScript + Bulma</title>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Formulario de prueba (Bulma)</h1>
+      <p class="subtitle">Demostración de eventos: onClick, onBlur, onChange y submit</p>
+
+      <form id="demoForm" class="box" onsubmit="handleSubmit(event)">
+        <div class="field">
+          <label class="label" for="nombre">Nombre</label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" onblur="handleBlur(event)" onchange="handleChange(event)">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </span>
+          </div>
+          <p class="help">Dispara onBlur al salir del campo y onChange cuando cambia el valor.</p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="email">Email</label>
+          <div class="control has-icons-left">
+            <input class="input" type="email" id="email" name="email" placeholder="tu@correo.com" onblur="handleBlur(event)" onchange="handleChange(event)">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="edad">Edad</label>
+          <div class="control">
+            <input class="input" type="number" id="edad" name="edad" min="0" max="120" placeholder="Edad" onchange="handleChange(event)" onblur="handleBlur(event)">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" id="acepto" name="acepto" onchange="handleChange(event)">
+            Acepto términos y condiciones
+          </label>
+        </div>
+
+        <div class="field is-grouped is-grouped-right">
+          <div class="control">
+            <button type="button" class="button is-link is-light" onclick="handleClick(event)">Leer (onClick)</button>
+          </div>
+          <div class="control">
+            <button type="submit" class="button is-primary">Enviar (submit)</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="content">
+        <h2 class="title is-5">Salida</h2>
+        <pre id="output" class="has-background-light p-3">(sin datos)</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Font Awesome for icons (optional) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/js/all.min.js"></script>
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
