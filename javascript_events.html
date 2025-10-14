@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+  >
+  <style>
+    .column{
+      height: 100px;
+      border: 1px solid white;
+    }
+  </style>
+</head>
+<body>
+<input id="text1" onblur="changeText()" type="text">
+<h2 onclick="fire()">Titulo 1</h2>
+<h2 id="text2">Titulo 2</h2>
+
+<div class="columns is-multiline has-text-centered">
+  <div class="column is-one-quarter" onclick="pablo(1)"><p class="subtitle" id="txt1">1</p></div>
+  <div class="column is-one-quarter" onclick="pablo(2)"><p class="subtitle" id="txt2">2</p></div>
+  <div class="column is-one-quarter" onclick="pablo(3)"><p class="subtitle" id="txt3">3</p></div>
+  <div class="column is-one-quarter" onclick="pablo(4)"><p class="subtitle" id="txt4">4</p></div>
+  <div class="column is-one-quarter" onclick="pablo(5)"><p class="subtitle" id="txt5">5</p></div>
+  <div class="column is-one-quarter" onclick="pablo(6)"><p class="subtitle" id="txt6">6</p></div>
+</div>
+
+<script>
+  console.log("Inicio del script")
+
+  function fire() {
+    console.log("Click");
+  }
+
+  function changeText() {
+    console.log("Change");
+    var text1 = document.getElementById("text1").value;
+    console.log("value read", text1);
+    var text2 = document.getElementById("text2");
+    text2.textContent = text1;
+  }
+
+  function pablo(num) {
+    console.log("Function pablo enter",num);
+    document.getElementById("txt"+num).textContent = "Hola "+num;
+  }
+</script>
+</body>
+</html>
